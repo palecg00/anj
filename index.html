@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>LinguaPath — Learn English from A1 to C1</title>
+  <meta name="description" content="LinguaPath: a local-first, interactive English course from A1 to C1. No account, no server — your progress stays in your browser.">
+  <meta name="theme-color" content="#13808a">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2313808a'/%3E%3Ctext x='32' y='42' font-family='Arial' font-weight='700' font-size='26' fill='white' text-anchor='middle'%3ELP%3C/text%3E%3C/svg%3E">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>
+    // Apply the saved theme before the page is drawn, to avoid a flash.
+    try {
+      var s = JSON.parse(localStorage.getItem('linguapath.v1') || '{}').settings || {};
+      var dark = s.theme === 'dark' || ((!s.theme || s.theme === 'system') && matchMedia('(prefers-color-scheme: dark)').matches);
+      document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+    } catch (e) { /* ignore */ }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="app" id="app">
+    <aside class="sidebar" aria-label="Main">
+      <a class="brand" href="#/dashboard"><span class="brand-mark" aria-hidden="true">LP</span><span>LinguaPath</span></a>
+      <nav class="nav" id="side-nav" aria-label="Main navigation"></nav>
+      <div class="side-foot" id="side-foot"></div>
+    </aside>
+    <main class="main" id="main" tabindex="-1">
+      <noscript><p>LinguaPath needs JavaScript to run. Please turn on JavaScript in your browser.</p></noscript>
+    </main>
+  </div>
+  <nav class="bottom-nav" id="bottom-nav" aria-label="Main navigation (mobile)"></nav>
+  <div class="more-sheet" id="more-sheet" aria-label="More pages"></div>
+  <div id="toasts" aria-live="polite"></div>
+  <div class="onboard" id="onboard" hidden role="dialog" aria-modal="true" aria-labelledby="ob-title"><div class="onboard-inner"></div></div>
+
+  <!-- Content (local data files) -->
+  <script src="js/data/curriculum.js"></script>
+  <script src="js/data/vocabulary.js"></script>
+  <script src="js/data/grammar-a.js"></script>
+  <script src="js/data/grammar-b.js"></script>
+  <script src="js/data/grammar-c.js"></script>
+  <script src="js/data/texts-a.js"></script>
+  <script src="js/data/texts-b.js"></script>
+  <script src="js/data/texts-c.js"></script>
+  <script src="js/data/scenarios.js"></script>
+  <script src="js/data/writing.js"></script>
+  <script src="js/data/placement.js"></script>
+  <!-- App logic -->
+  <script src="js/ui.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/speech.js"></script>
+  <script src="js/quiz.js"></script>
+  <script src="js/gen.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/pages/onboarding.js"></script>
+  <script src="js/pages/dashboard.js"></script>
+  <script src="js/pages/learn.js"></script>
+  <script src="js/pages/vocab.js"></script>
+  <script src="js/pages/grammar.js"></script>
+  <script src="js/pages/texts.js"></script>
+  <script src="js/pages/writing.js"></script>
+  <script src="js/pages/practice.js"></script>
+  <script src="js/pages/tests.js"></script>
+  <script src="js/pages/goals.js"></script>
+  <script src="js/pages/progress.js"></script>
+  <script src="js/pages/settings.js"></script>
+</body>
+</html>
